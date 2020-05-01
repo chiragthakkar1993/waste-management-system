@@ -2,7 +2,7 @@
  * RestExceptionHandler.java
  *  
  */
-package com.wms.rest.web.controller;
+package com.wms.rest.web.exception.handler;
 
 import javax.servlet.http.HttpServletRequest;
 
