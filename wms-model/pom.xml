@@ -7,5 +7,5 @@
 		<artifactId>waste-management-system</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>wms-model</artifactId>
+	<artifactId>wms-entity</artifactId>
 </project>

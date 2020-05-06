@@ -39,7 +39,7 @@
 			</dependency>
 			<dependency>
 				<groupId>com.appkick.wms</groupId>
-				<artifactId>wms-model</artifactId>
+				<artifactId>wms-entity</artifactId>
 				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
 			<dependency>
@@ -108,7 +108,7 @@
 		</dependency>
 	</dependencies>
 	<modules>
-		<module>wms-model</module>
+		<module>wms-entity</module>
 		<module>wms-web</module>
 		<module>wms-repository</module>
 		<module>wms-service</module>

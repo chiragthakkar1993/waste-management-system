@@ -25,11 +25,6 @@
 			<artifactId>springfox-data-rest</artifactId>
 			<version>3.0.0-SNAPSHOT</version>
 		</dependency>
-
-		<dependency>
-			<groupId>com.appkick.wms</groupId>
-			<artifactId>wms-model</artifactId>
-		</dependency>
 		<dependency>
 			<groupId>com.appkick.wms</groupId>
 			<artifactId>wms-service-impl</artifactId>
@@ -41,6 +36,10 @@
 		<dependency>
 			<groupId>com.appkick.wms</groupId>
 			<artifactId>wms-web-model</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.appkick.wms</groupId>
+			<artifactId>wms-entity</artifactId>
 		</dependency>
 	</dependencies>
 
