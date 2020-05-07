@@ -55,6 +55,17 @@
 			<appender-ref ref="ASYNC" />
 		</logger>
 	</springProfile>
+	<springProfile name="heroku">
+		<root level="info">
+			<appender-ref ref="STDOUT" />
+			<appender-ref ref="FILE" /> 
+		</root>
+		<logger name="com.appkick" additivity="false" level="error">
+			<appender-ref ref="STDOUT" />
+			<appender-ref ref="FILE" />
+			<appender-ref ref="ASYNC" />
+		</logger>
+	</springProfile>
 
 	<springProfile name="prod">
 		<root level="info">
