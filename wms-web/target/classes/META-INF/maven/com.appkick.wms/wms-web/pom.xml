@@ -45,6 +45,18 @@
 			<artifactId>springfox-data-rest</artifactId>
 			<version>3.0.0-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>com.appkick.wms</groupId>
+			<artifactId>wms-repository</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.appkick.wms</groupId>
+			<artifactId>wms-service</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.appkick.wms</groupId>
+			<artifactId>wms-data-seeder</artifactId>
+		</dependency>
 	</dependencies>
 	<repositories>
 		<repository>

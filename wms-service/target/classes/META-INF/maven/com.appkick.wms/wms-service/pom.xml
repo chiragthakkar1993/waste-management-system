@@ -6,4 +6,10 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>wms-service</artifactId>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.appkick.wms</groupId>
+  		<artifactId>wms-entity</artifactId>
+  	</dependency>
+  </dependencies>
 </project>

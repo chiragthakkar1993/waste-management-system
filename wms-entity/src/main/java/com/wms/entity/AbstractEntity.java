@@ -4,8 +4,6 @@
  */
 package com.wms.entity;
 
-import java.time.LocalDateTime;
-
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
@@ -25,11 +23,11 @@ import lombok.Getter;
 @JsonIgnoreProperties(value = { "createdBy", "createdDate", "updatedBy", "updatedDate" })
 public abstract class AbstractEntity {
 	@CreatedBy
-	private LocalDateTime createdBy;
+	private String createdBy;
 	@LastModifiedBy
-	private LocalDateTime updatedBy;
+	private String updatedBy;
 	@CreatedDate
-	private LocalDateTime createdDate;
+	private String createdDate;
 	@LastModifiedDate
-	private LocalDateTime updatedDate;
+	private String updatedDate;
 }
