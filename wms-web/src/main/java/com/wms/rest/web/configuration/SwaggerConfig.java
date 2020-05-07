@@ -56,7 +56,7 @@ public class SwaggerConfig {
 	@Bean
 	public Docket api() {
 		Docket docket = new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("com.appkick.controller.v1")).paths(PathSelectors.any())
+				.apis(RequestHandlerSelectors.basePackage("com.wms.rest.web.controller")).paths(PathSelectors.any())
 				.build().apiInfo(API_INFO).pathProvider(new MyPathProvider() {
 
 				});
