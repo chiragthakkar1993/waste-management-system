@@ -1,1 +1,1 @@
-web: java -jar wms-web/target/wms-web-0.0.1-SNAPSHOT.jar -Dserver.port=${PORT:8080}
+web: java -jar wms-web/target/wms-web-0.0.1-SNAPSHOT.jar -Dserver.port=${PORT}
