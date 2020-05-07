@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true" scan="true"
+	scanPeriod="30 seconds">
+	<property name="LOG_PATH" value="d:/git repositories/wms/logs" />
+	<property name="LOG_ARCHIVE" value="${LOG_PATH}/archive" />
+	<timestamp key="timestamp-by-second"
+		datePattern="yyyy_MM_dd_'T'_HH_mm_ss" />
+	<timestamp key="timestamp-by-date" datePattern="yyyy_MM_dd" />
+	<appender name="STDOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<!-- <pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} %green([%thread]) %highlight(%-5level) %logger.%M - %msg%n</pattern> -->
+			<pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger.%M - %msg%n</pattern>
+		</encoder>
+	</appender>
+	<appender name="FILE"
+		class="ch.qos.logback.core.FileAppender">
+		<file>${LOG_PATH}/logfile-${timestamp-by-date}.log</file>
+		<encoder>
+			<pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n</pattern>
+			<outputPatternAsHeader>false</outputPatternAsHeader>
+		</encoder>
+	</appender>
+	<appender name="ROLLING"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${LOG_PATH}/rollingfile.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_ARCHIVE}/rollingfile.log%d{yyyy-MM-dd}.log.zip
+			</fileNamePattern>
+			<maxHistory>1800</maxHistory>
+			<totalSizeCap>30MB</totalSizeCap>
+		</rollingPolicy>
+		<encoder>
+			<pattern>%msg%n</pattern>
+		</encoder>
+	</appender>
+	<appender name="ASYNC"
+		class="ch.qos.logback.classic.AsyncAppender">
+		<appender-ref ref="ROLLING" />
+	</appender>
+	<logger name="com.appkick" level="info" additivity="false">
+		<appender-ref ref="STDOUT" />
+	<!-- 	<appender-ref ref="FILE" />
+		<appender-ref ref="ASYNC" /> -->
+	</logger>
+	<springProfile name="local">
+		<root level="info">
+			<appender-ref ref="STDOUT" />
+			<appender-ref ref="FILE" /> 
+		</root>
+		<logger name="com.appkick" additivity="false" level="error">
+			<appender-ref ref="STDOUT" />
+			<appender-ref ref="FILE" />
+			<appender-ref ref="ASYNC" />
+		</logger>
+	</springProfile>
+
+	<springProfile name="prod">
+		<root level="info">
+			<appender-ref ref="FILE" />
+			<appender-ref ref="ASYNC" />
+		</root>
+		<logger name="com.appkick" additivity="false" level="error">
+			<appender-ref ref="FILE" />
+			<appender-ref ref="ASYNC" />
+		</logger>
+	</springProfile>
+</configuration>

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
@@ -15,9 +16,10 @@ import lombok.Setter;
 
 @Getter
 @Component
+@PropertySource(value = "classpath:rest.properties", ignoreResourceNotFound = true)
 public class GenericExceptionResponse {
 
-	@Value("${organico.api.prefix_version}")
+	@Value("${wms.api.version}")
 	@Setter
 	private String apiversion;
 	private HttpStatus status;

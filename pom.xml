@@ -107,6 +107,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 	<modules>
 		<module>wms-entity</module>
 		<module>wms-web</module>
@@ -115,6 +116,7 @@
 		<module>wms-service-impl</module>
 		<module>wms-util</module>
 		<module>wms-data-seeder</module>
+		<module>wms-web-model</module>
 	</modules>
 
 </project>

@@ -1,0 +1,1 @@
+web: java -jar wms-web/target/wms-web-0.0.1-SNAPSHOT.jar
