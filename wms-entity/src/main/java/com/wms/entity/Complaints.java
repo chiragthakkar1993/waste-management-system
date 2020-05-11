@@ -4,8 +4,6 @@
  */
 package com.wms.entity;
 
-import java.time.LocalDateTime;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -37,6 +35,7 @@ public class Complaints extends AbstractEntity {
 	private String ticketNo;
 	@JsonProperty("type")
 	private String complaintType;
+	private String remarks;
 	@DBRef
 	private Subscription subscription;
 	@DBRef

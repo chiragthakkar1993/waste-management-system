@@ -2,7 +2,7 @@
  * JacksonConfig.java
  *  
  */
-package com.wms.rest.web.configuration;
+package com.wms.rest.configuration;
 
 import org.springframework.boot.autoconfigure.jackson.Jackson2ObjectMapperBuilderCustomizer;
 import org.springframework.context.annotation.Bean;

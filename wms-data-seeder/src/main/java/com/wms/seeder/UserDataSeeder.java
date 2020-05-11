@@ -1,4 +1,5 @@
 package com.wms.seeder;
+
 import java.util.Arrays;
 
 import javax.annotation.PostConstruct;
@@ -28,8 +29,10 @@ public class UserDataSeeder {
 	@PostConstruct
 	public void setup() {
 		mongoTemplate.dropCollection(User.class);
-		User chirag = User.builder().email("chirag.thakkar1993@gmail.com").name("chirag").mobile("9727432368").build();
-		User gaurav = User.builder().email("gaurav@gmail.com").name("gaurav").mobile("1234567890").build();
+		User chirag = User.builder().email("chirag.thakkar1993@gmail.com").firstName("chirag").lastName("Thakkar")
+				.mobile("9727432368").build();
+		User gaurav = User.builder().email("gaurav@gmail.com").firstName("gaurav").lastName("mittal")
+				.mobile("1234567890").build();
 
 		this.mongoTemplate.insertAll(Arrays.asList(chirag, gaurav));
 

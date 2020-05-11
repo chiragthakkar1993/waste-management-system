@@ -19,5 +19,9 @@
   		<groupId>com.appkick.wms</groupId>
   		<artifactId>wms-repository</artifactId>
   	</dependency>
+  	<dependency>
+  		<groupId>com.appkick.wms</groupId>
+  		<artifactId>wms-web-model</artifactId>
+  	</dependency>
   </dependencies>
 </project>

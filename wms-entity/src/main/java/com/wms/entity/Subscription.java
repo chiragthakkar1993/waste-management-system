@@ -20,6 +20,7 @@ import lombok.NoArgsConstructor;
  * @type Subscription
  * @since May 7, 2020
  */
+
 @Document
 @Data
 @AllArgsConstructor
@@ -28,11 +29,11 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Subscription extends AbstractEntity {
 
-	@EqualsAndHashCode.Include
 	@Id
+	@EqualsAndHashCode.Include
 	private String id;
 	private Address address;
-	private Customer customer;
+	private User user;
 	@JsonProperty("active")
 	private Boolean isActive;
 

@@ -2,7 +2,7 @@
  * SwaggerConfig.java
  *  
  */
-package com.wms.rest.web.configuration;
+package com.wms.rest.configuration;
 
 import java.util.Collections;
 
