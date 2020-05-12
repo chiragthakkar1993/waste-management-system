@@ -4,6 +4,8 @@
  */
 package com.wms.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -23,6 +25,7 @@ import lombok.NoArgsConstructor;
 @Getter
 public class AddressDto {
 	private String id;
+	@JsonProperty("house_no")
 	private String houseNo;
 	private String society;
 	private String street;
@@ -30,6 +33,7 @@ public class AddressDto {
 	private String block;
 	private String ward;
 	private String colony;
+	@JsonProperty("address_type")
 	private String addressType;
 	private double latitude;
 	private double longitude;
