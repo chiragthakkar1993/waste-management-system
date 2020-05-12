@@ -50,7 +50,7 @@ public class SwaggerConfig {
 			"chirag.thakkar1993@gmail.com");
 	private final ApiInfo API_INFO = new ApiInfo("Organico API Documentation",
 			"this documentation provides all the required details client need to know to access APIs", "v1",
-			"www.appkick.com/tc", contact, "Licensed to Appkick PVT LTD", "www.appkick.com/license",
+			"www.wms-india.com/tc", contact, "Licensed to WMS INDIA PVT LTD", "www.wms-india.com/license",
 			Collections.emptyList());
 
 	@Bean

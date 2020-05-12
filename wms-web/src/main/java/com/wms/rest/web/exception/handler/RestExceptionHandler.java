@@ -96,7 +96,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 	}
 
 	private ResponseEntity<Object> buiResponseEntity(GenericExceptionResponse genericResponse) {
-		return new ResponseEntity<Object>(genericResponse, genericResponse.getStatus());
+		return new ResponseEntity<Object>(genericResponse, genericResponse.getHttp_status());
 	}
 
 }

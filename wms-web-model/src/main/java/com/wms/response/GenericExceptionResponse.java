@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.wms.constant.RestResponseStatus;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -22,7 +23,8 @@ public class GenericExceptionResponse {
 	@Value("${wms.api.version}")
 	@Setter
 	private String apiversion;
-	private HttpStatus status;
+	private HttpStatus http_status;
+	private RestResponseStatus status;
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy hh:mm:ss")
 	private LocalDateTime timestamp;
 	private String message;
@@ -36,10 +38,11 @@ public class GenericExceptionResponse {
 
 	}
 
-	public GenericExceptionResponse(HttpStatus status, String message, String path, Throwable ex) {
+	public GenericExceptionResponse(HttpStatus http_status, String message, String path, Throwable ex) {
 		this();
 		this.path = path;
-		this.status = status;
+		this.http_status = http_status;
+		this.status = RestResponseStatus.FAILED;
 		this.message = message;
 		this.debugMessage = ex.toString();
 	}

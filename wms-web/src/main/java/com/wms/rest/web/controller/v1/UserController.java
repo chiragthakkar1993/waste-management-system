@@ -36,6 +36,8 @@ import com.wms.entity.User;
 import com.wms.rest.assembler.UserAssembler;
 import com.wms.service.IUserService;
 
+import io.swagger.annotations.Api;
+
 /**
  * @author chirag
  * @type UserController
@@ -45,6 +47,7 @@ import com.wms.service.IUserService;
 @RestController
 @RequestMapping("/users")
 @CrossOrigin
+@Api(value = "User Service", tags = { "User Service" })
 public class UserController {
 
 	@Autowired
