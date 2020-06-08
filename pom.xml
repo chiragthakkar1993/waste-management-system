@@ -6,7 +6,6 @@
 	<artifactId>waste-management-system</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>${project.groupId}:${project.artifactId}</name>
 	<description>Rest services for backend operations of the waste management system</description>
 	<properties>
 		<java.version>1.8</java.version>
@@ -108,6 +107,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 
 	<modules>
 		<module>wms-entity</module>
